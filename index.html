@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script>
+    if('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js', { scope: '/' })
+      })
+    }
+  </script>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>My Awesome App</title>
     <meta name="description" content="My Awesome App description">
